@@ -32,10 +32,7 @@
     <span *ngIf="registerForm.errors?.['passwordmatcherror']"
       >رمز عبور مطابقت ندارد!</span
     >
-    <!-- <span *ngIf="loginForm.errors?.['mobileerror']"
-      >شماره موبایل به درستی وارد نشده است!</span
-    > -->
-    <button class="mt-6 w-full text-white	rounded-lg" [disabled]="registerForm.invalid">ثبت نام</button>
+    <button (click)="toggleClass()" class="mt-6 w-full text-white	rounded-lg" [disabled]="registerForm.invalid">ثبت نام</button>
   </form>
 </div>
 <div [class.hidden]="classApplied"
@@ -65,7 +62,7 @@
       <input type="checkbox">
       <label>مرا به یاد داشته باش</label>
     </div>
-    <button (click)="toggleClass()" class="mt-6 w-full text-white	rounded-lg" [disabled]="loginForm.invalid">ورود</button>
+    <button class="mt-6 w-full text-white	rounded-lg" [disabled]="loginForm.invalid">ورود</button>
   </form>
 </div>
 <div class="pr-bottom-links flex gap-2">
